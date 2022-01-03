@@ -2,57 +2,143 @@
 
 #body {
     font-family: 'Comfortaa', cursive;
+    /*background: linear-gradient(to right, rgb(25, 208, 113), rgb(52, 83, 208));*/
 }
 
 .container {
     width: 95%;
+    margin: auto;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hex-color {
+.hex-colors {
     text-align: center;
+    width: 100%;
 }
 
-.hex-color h1 {
+.hex-colors h1, h2 {
     font-size: 2rem;
     text-transform: uppercase;
+    -ms-animation: colorchange 5s infinite alternate;
+    -moz-animation: colorchange 5s infinite alternate;
+    -o-animation: colorchange 5s infinite alternate;
     animation: colorchange 5s infinite alternate;
 }
 
-.hex-color h2 {
-    font-size: 2rem;
+.hex-colors h2 {
     margin-top: 15%;
+    text-transform: lowercase;
+}
+
+@-ms-keyframes colorchange{
+    0% {
+        color: #ffffff;
+    }
+
+    20% {
+        color: #cccccc;
+    }
+
+    40% {
+        color: #999999;
+    }
+
+    60% {
+        color: #666666;
+    }
+
+    80% {
+        color: #333333;
+    }
+
+    100% {
+        color: #000000;
+    }
+}
+
+@-moz-keyframes colorchange{
+    0% {
+        color: #ffffff;
+    }
+
+    20% {
+        color: #cccccc;
+    }
+
+    40% {
+        color: #999999;
+    }
+
+    60% {
+        color: #666666;
+    }
+
+    80% {
+        color: #333333;
+    }
+
+    100% {
+        color: #000000;
+    }
+}
+
+@-o-keyframes colorchange{
+    0% {
+        color: #ffffff;
+    }
+
+    20% {
+        color: #cccccc;
+    }
+
+    40% {
+        color: #999999;
+    }
+
+    60% {
+        color: #666666;
+    }
+
+    80% {
+        color: #333333;
+    }
+
+    100% {
+        color: #000000;
+    }
 }
 
 @keyframes colorchange {
     0% {
-        color: indigo;
+        color: #ffffff;
     }
+
     20% {
-        color: blue;
+        color: #cccccc;
     }
+
     40% {
-        color: green;
+        color: #999999;
     }
+
     60% {
-        color: yellow;
+        color: #666666;
     }
+
     80% {
-        color: orange;
+        color: #333333;
     }
+
     100% {
-        color: red;
+        color: #ffffff;
     }
 }
 
-@media (max-width: 480px) {
-    .hex-color h1 {
-        font-size: 1.5rem;
-    }
-    .hex-color h2 {
-        font-size: 1.5rem;
-    }
+@media(max-width:480px){
+    #hex-colors h1{font-size: 1.5rem;}
+
+    #hex-colors h2{font-size: 1.5rem;}
 }
